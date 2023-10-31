@@ -1,7 +1,14 @@
+*NOTE: Under construction*
+
 # Omnitest Demonstrations
 Demonstrations of using Omnitest in various software development workflows.
 
-***NOTE: Under construction***
+
+**Flagship use case**: 
+`omnitest . --runner=jest --pull-request`
+
+
+
 
 ## Omnitest CI
 The CLI for filtering tests based on changes in the code.
@@ -20,10 +27,9 @@ The CLI for filtering tests based on changes in the code.
 1. Install a NodeJS dependency `npm -g install madge` ([https://github.com/pahen/madge#installation](link))
 2. Change a line of code
 3. Execute `omnitest path/to/repo`
-4. Execute tests, e.g. `npm test <list of tests from Omnitest>`
+4. Execute tests, e.g. `npm test <list of tests from Omnitest>` o
 
 **Demo: ExpressJS + Jest**
-TODO
 ```
 # Clone a starter (e.g. https://github.com/w3cj/express-api-starter-ts)
 npx create-express-api --typescript --directory demo
@@ -36,24 +42,15 @@ npm -g install madge
 echo "// a demonstration" > src/interfaces/MessageResponse.ts
 
 # Analyse and run tests
-
-declare -a tests=(omnitest . --names-only)
-
-npm run jest --runTestsByPath ${tests}
-
-# For simple local tests runs suchs as above,
-# the same can be achieved with
-# npm run jest --onlyChanged
-#
-# For more complex situations, you can provide Omnitest with a list of changes,
-# and it will again calculate the tests to run for you.
-# See the "Change management" part of this manual.
+omnitest . --runner=jest
 ```
-
 
 #### Specific: GitHub pull request workflow
 TODO
-- changes between source and target
+```
+- name: Run tests with Omnitest filtering
+  run: omnitest --runner=nextest --pull-request-workflow
+```
 
 
 #### Get Omnitest CI binary and license
