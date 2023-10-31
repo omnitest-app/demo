@@ -49,7 +49,7 @@ omnitest . --runner=jest
 TODO
 ```
 - name: Run tests with Omnitest filtering
-  run: omnitest --runner=nextest --pull-request-workflow
+  run: omnitest --runner=jest --pull-request
 ```
 
 
