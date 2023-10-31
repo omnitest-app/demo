@@ -1,7 +1,7 @@
 *NOTE: Under construction*
 
 # Omnitest Demonstrations
-Demonstrations of using Omnitest in various software development workflows.
+Guides using Omnitest in various software development workflows.
 
 
 **Flagship use case**: 
