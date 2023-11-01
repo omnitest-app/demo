@@ -49,7 +49,9 @@ omnitest . --runner=jest
 TODO
 ```
 - name: Run tests with Omnitest filtering
-  run: omnitest --runner=jest --pull-request
+  run: |
+    export OMNITEST_CI_KEY=${{ vars.OMNITEST_LICENSE }}
+    omnitest --runner=jest --pull-request
 ```
 
 
