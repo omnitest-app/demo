@@ -112,6 +112,7 @@ echo ${affected_tests} | ./your-script-to-run-affected-tests
 ##### Changes from pull requests in GitHub
 When `--pull-request` is provided, Omnitest will automatically compare the target and source branches for differences. For this, the `GITHUB_BASE_REF` and `GITHUB_SOURCE_REF` need to be provided. They define the target and source branches as defined in [GitHub Variables](https://docs.github.com/en/actions/learn-github-actions/variables).
 
+Note: The further apart the source and target branches are, the more differences will be found. For the quickest test runs the pull request source branch should be up to date with the target. This way only the proposed new changes will be considered as differences. This is where rebasing and merging target->source first come in as some useful tools.
 
 #### Get Omnitest CI binary and license
 TODO
