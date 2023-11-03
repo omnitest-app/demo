@@ -69,5 +69,36 @@ TODO
 - built-ins & manual data creation
 
 #### Change management
-TODO
-- providing a list of changes
+
+##### Providing changes manually
+It is possible to provide changes manually via a `changes.json` located at the root of the provided project directory. If the file exists, it will be the sole source of changes, unless the `--pull-request` was provided, in which case the file will be skipped.
+
+Changes.json format
+```
+[
+  { "target": "path/to/changed/file" }
+]
+```
+
+These changes will be used just like auto-discovered changes.
+```
+./your-script-to-create-changes > changes.json
+omnitest . --runner=jest
+```
+
+You can also further process the effects of the changes manually.
+```
+./your-script-to-create-changes > changes.json
+declare -a affected_tests=$(omnitest . --names-only)
+
+# Read the changes in your script line by line,
+echo ${affected_tests} | ./your-script-to-run-affected-tests
+
+# or do some data formatting.
+#   E.g. Replace \n's and provide the test files as arguments.
+```
+
+##### Changes from pull requests in GitHub
+When `--pull-request` is provided, Omnitest will automatically compare the target and source branches for differences. For this, the `GITHUB_BASE_REF` and `GITHUB_SOURCE_REF` need to be provided. They define the target and source branches as defined in [GitHub Variables](https://docs.github.com/en/actions/learn-github-actions/variables).
+
+Clever usage of the workflow outside of the GitHub may be possible.
