@@ -49,7 +49,9 @@ omnitest . --runner=jest
 #### Specific: GitHub pull request workflow
 TODO
 ```
-
+- uses: actions/checkout@v4
+  with:
+    fetch-depth: 0 # It's important to fetch enough of the history to be able to git diff branches
 
 - name: Run tests with Omnitest filtering
   run: |
