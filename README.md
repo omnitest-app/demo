@@ -8,6 +8,7 @@ Guides to using Omnitest in various software development workflows.
 `omnitest . --runner=jest --pull-request`
 
 
+TODO: Link to webshop.
 
 
 ## Omnitest CI
@@ -27,7 +28,7 @@ The CLI for filtering tests based on changes in the code.
 1. Install a NodeJS dependency `npm -g install madge` ([https://github.com/pahen/madge#installation](link))
 2. Change a line of code
 3. Execute `omnitest path/to/repo`
-4. Execute tests, e.g. `npm test <list of tests from Omnitest>` o
+4. Execute tests, e.g. `npm exec jest --testsByPath <list of tests from Omnitest>`
 
 **Demo: ExpressJS + Jest**
 ```
@@ -48,30 +49,34 @@ omnitest . --runner=jest
 #### Specific: GitHub pull request workflow
 TODO
 ```
+
+
 - name: Run tests with Omnitest filtering
   run: |
     export OMNITEST_CI_KEY=${{ vars.OMNITEST_LICENSE }}
     omnitest --runner=jest --pull-request
 ```
 
-
-#### Get Omnitest CI binary and license
-TODO
-- where and how
-- platforms
-- subscription & billing
-
-#### Executing
-TODO
-- where and how
-- license usage
-- platforms
-
 #### Built-ins
 
-- NodeJs file dependencies: with 3rd party dependency `madge`
-- NodeJs Jest test execution: `npm exec jest` with `npm` as the package manager and `jest` as a project dependency
+##### NodeJs
+- File dependencies: with 3rd party dependency `madge`
+- Jest test execution: `npm exec jest` with `npm` as the package manager and `jest` as a project dependency
+- Default test automation filename matching glob: `*test*.*`
+  
+TODO
+- Support pnpm, yarn, and bun as well
 
+
+##### Other languages / stacks
+Omnitest supports providing data manually through
+- changes.json
+- dependencies.json
+
+- Default test automation filename matching glob: `*test*.*`
+- TODO: Manually provide a test automation filename matching glob `--ta "*spec*.rb"`
+
+  
 #### Change management
 
 ##### Providing changes manually
@@ -104,5 +109,24 @@ echo ${affected_tests} | ./your-script-to-run-affected-tests
 
 ##### Changes from pull requests in GitHub
 When `--pull-request` is provided, Omnitest will automatically compare the target and source branches for differences. For this, the `GITHUB_BASE_REF` and `GITHUB_SOURCE_REF` need to be provided. They define the target and source branches as defined in [GitHub Variables](https://docs.github.com/en/actions/learn-github-actions/variables).
+
+
+#### Get Omnitest CI binary and license
+TODO
+- where and how
+- platforms
+- subscription & billing
+
+#### License usage
+An environment variable is required:
+`export OMNITEST_CI_KEY=a-valid-license-key`
+
+#### Platforms
+Runs on
+- Ubuntu (Built on GitHub's ubuntu-20.04 runner)
+
+Dependencies outside of GitHub's runners
+- Ubuntu: libssl-dev
+
 
 Clever usage of the workflow outside of the GitHub may be possible.
