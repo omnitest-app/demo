@@ -66,7 +66,11 @@ TODO
 - where and how
 - license usage
 - platforms
-- built-ins & manual data creation
+
+#### Built-ins
+
+- NodeJs file dependencies: with 3rd party dependency `madge`
+- NodeJs Jest test execution: `npm exec jest` with `npm` as the package manager and `jest` as a project dependency
 
 #### Change management
 
