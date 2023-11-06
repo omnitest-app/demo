@@ -74,6 +74,7 @@ TODO
 Omnitest supports providing data manually through
 - changes.json
 - dependencies.json
+- tests.json
 
 - Default test automation filename matching glob: `*test*.*`
 - TODO: Manually provide a test automation filename matching glob `--ta "*spec*.rb"`
@@ -114,11 +115,33 @@ When `--pull-request` is provided, Omnitest will automatically compare the targe
 
 Note: The further apart the source and target branches are, the more differences will be found. For the quickest test runs the pull request source branch should be up to date with the target. This way only the proposed new changes will be considered as differences. This is where rebasing and merging target->source first come in as some useful tools.
 
+#### Providing data manually
+
+Changes.json format
+```
+[
+  { "target": "path/to/changed/file" }
+]
+```
+Dependencies.json format
+```
+[
+  { "source": "path/to/file/A" },
+  { "target": "path/to/file/B" }
+]
+```
+Tests.json format
+```
+[
+  { "file": "path/to/test/file" }
+]
+```
+
+
 #### Get Omnitest CI binary and license
 TODO
 - where and how
-- platforms
-- subscription & billing
+- subscriptions & billing
 
 #### License usage
 An environment variable is required:
