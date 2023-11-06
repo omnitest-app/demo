@@ -47,7 +47,7 @@ omnitest . --runner=jest
 ```
 
 #### Specific: GitHub pull request workflow
-TODO
+
 ```
 - uses: actions/checkout@v4
   with:
@@ -62,6 +62,7 @@ TODO
 #### Built-ins
 
 ##### NodeJs
+
 - File dependencies: with 3rd party dependency `madge`
 - Jest test execution: `npm exec jest` with `npm` as the package manager and `jest` as a project dependency
 - Default test automation filename matching glob: `*test*.*`
@@ -71,10 +72,12 @@ TODO
 
 
 ##### Other languages / stacks
+
 Omnitest supports providing data manually through
 - changes.json
 - dependencies.json
 - tests.json
+Read "Providing data manually" for more.
 
 - Default test automation filename matching glob: `*test*.*`
 - TODO: Manually provide a test automation filename matching glob `--ta "*spec*.rb"`
