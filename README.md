@@ -21,13 +21,6 @@ by
 
 It is a desktop app that works on individual users' machines, using locally available git repositories. 
 
-
-
-### Requirements
-- a local git repository
-- ability to manage changes, e.g. by using Github Desktop
-- a project built using supported languages and frameworks (JSX/TSX, VueJS, Flutter)
-
 ### Motivation
 
 1. **User value**: A testing plan that is a synthesis of features, test cases and implementation focuses all efforts naturally towards user value.
@@ -49,7 +42,26 @@ with an hourly cost between 30€ to 100€, using Omnitest could reduce costs b
 - 9600€ to 41600€ for 100€/h cost
 
 
+**Efficiency and effectiveness benefits**
+
+Simplified, assuming a continuous long-term productivity increase month-to-month of
+- 1% per person
+- 10% per person
+
+would [compound](https://en.wikipedia.org/wiki/Compound_interest#Periodic_compounding) over
+- 1 year: between 13% and 214%
+- 3 years: between 43% and 2991%
+
+into theoretically produced extra value based on yearly cost of
+- 50 000€: between `13%/100% * 50 000€ = 6500€` and `2991% / 100% * 50 000€ = 1 495 500€`
+- 200 000€: between `13%/100% * 200 000€ = 26 000€` and `2991% / 100% * 50 000€ = 5 982 000€`
+
 ## User Guide
+
+### Requirements
+- a local git repository
+- ability to manage changes, e.g. by using Github Desktop
+- a project built using supported languages and frameworks (JSX/TSX, VueJS, Flutter)
 
 
 ### Getting started
