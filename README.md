@@ -30,16 +30,23 @@ It is a desktop app that works on individual users' machines, using locally avai
 
 ### Motivation
 
-1. User value: A testing plan that is a synthesis of features, test cases and implementation focuses all efforts naturally towards user value.
-2. Freedom to refactor: The automatically generated change-based test plan improves product team's ability to modify the codebase safely. Easier and cheaper maintenace leads to more effective feature development.
-3. Omnitest is fast: Waiting is reduced in multiple ways, because a near instant automatic analysis can be run at will, by those who need it, at any stage of development. 
+1. **User value**: A testing plan that is a synthesis of features, test cases and implementation focuses all efforts naturally towards user value.
+2. **Freedom to refactor**: The automatically generated change-based test plan improves product team's ability to modify the codebase safely. Easier and cheaper maintenace leads to more effective feature development.
+3. **Faster feedback loops**: Waiting is reduced in multiple ways, because a near instant automatic analysis can be run at will, by those who need it, at any stage of development. 
 
-**Benefit calculation**
+#### Benefit calculations
+
+**Test plan creation**
+
 In a pilot case, a comparable testing plan to an 8 hour effort over 3 days using a wiki-like system was achieved with Omnitest in minutes.
 
 Simplified, assuming such a workload on 
-- a monthly basis: 12*8h = 
-- a weekly basis: 52*8h = 
+- a monthly basis: 12*8h = 96h/year
+- a weekly basis: 52*8h = 416h/year
+
+with an hourly cost between 30€ to 100€, using Omnitest could reduce costs by
+- 2880€ to 12480€ for 30€/h cost
+- 9600€ to 41600€ for 100€/h cost
 
 
 ## User Guide
@@ -77,6 +84,12 @@ You can adjust the feature extraction rules in `config.features`.
         "matchers": ["**/{import,export}/**/*{View}*.tsx", "**/*{Export,Import}*{View}*.tsx"]
       }
 ]
+```
+Excluding folders
+```
+  "config": {
+    "excludes": ["**/resources/templates/**"]
+  }
 ```
 
 #### Test automation
