@@ -19,5 +19,21 @@ by
 - Automatically adjusting to existing architecture based on file dependencies
 
 
-## Usage Guide
+It is a desktop app that works on individual users' machines, using locally available git repositories. 
+
+
+
+### Requirements
+- a local git repository
+- ability to manage changes, e.g. by using Github Desktop
+- a project built using supported languages and frameworks (JSX/TSX, VueJS, Flutter)
+
+### Motivation
+
+1. User value: A testing plan that is a synthesis of features, test cases and implementation focuses all efforts naturally towards user value.
+2. Freedom to refactor: The automatically generated change-based test plan improves product team's ability to modify the codebase safely. Easier and cheaper maintenace leads to more effective feature development.
+3. Omnitest is fast: Waiting is reduced in multiple ways, because a near instant automatic analysis can be run at will, by those who need it, at any stage of development. 
+
+## User Guide
 Guides to using Omnitest in various software development workflows.
+
