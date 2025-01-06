@@ -1,7 +1,7 @@
 # Omnitest: Exciting, safe and effective releases
 An automatic software testing planner for developers, testers and product managers. 
 
-
+[Download app](https://web.crabnebula.cloud/omnitest/omnitest/releases)
 
 ## Working with Omnitest
 - Improves product teams' innovation ability 🧠
@@ -37,3 +37,79 @@ It is a desktop app that works on individual users' machines, using locally avai
 ## User Guide
 Guides to using Omnitest in various software development workflows.
 
+### Getting started
+
+1. Open Omnitest
+2. Open project
+3. Review `Testing > Testing Round`
+4. Make code changes
+5. Reload project
+6. Repeat steps 3-6
+
+
+### Adjusting the plan
+1. Open `test.plan.json`
+2. Modify 
+3. Reload project in Omnitest
+
+
+#### Features
+You can adjust the feature extraction rules in `config.features`.
+
+**Useful examples**
+```
+  "config": {
+    "features": [
+      {
+        "alias": "All Views",
+        "matchers": ["**/views/**", "**/*{View}*.tsx"]
+      },
+      {
+        "alias": "Feature set: Customer Import & Export",
+        "matchers": ["**/{import,export}/**/*{View}*.tsx", "**/*{Export,Import}*{View}*.tsx"]
+      }
+]
+```
+
+#### Test automation
+
+You can adjust the test automation extraction rules in `config.test_automation` by setting glob matchers.
+
+**Useful examples**
+
+```
+    "test_automation": {
+      "file_name_globs": ["*.spec.ts", "*.test.ts"]
+    }
+```
+
+#### Changes
+
+You can adjust the change extraction rules in `config.changes` following the below examples.
+
+**Useful examples**
+
+
+- Local vs remote
+```
+    "changes": {
+      "old": "HEAD{upstream}",
+      "new": "HEAD"
+    }
+```
+
+- Current branch vs main branch
+```
+    "changes": {
+      "old": "master",
+      "new": "HEAD"
+    }
+```
+
+- Changes between particular commits: 
+
+Checkout the newer commit and adjust the older commit hash
+```
+    "changes": {
+      "old": "<older git commit hash>",
+      "new": "HEAD"
