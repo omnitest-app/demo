@@ -34,12 +34,20 @@ It is a desktop app that works on individual users' machines, using locally avai
 2. Freedom to refactor: The automatically generated change-based test plan improves product team's ability to modify the codebase safely. Easier and cheaper maintenace leads to more effective feature development.
 3. Omnitest is fast: Waiting is reduced in multiple ways, because a near instant automatic analysis can be run at will, by those who need it, at any stage of development. 
 
+**Benefit calculation**
+In a pilot case, a comparable testing plan to an 8 hour effort over 3 days using a wiki-like system was achieved with Omnitest in minutes.
+
+Simplified, assuming such a workload on 
+- a monthly basis: 12*8h = 
+- a weekly basis: 52*8h = 
+
+
 ## User Guide
-Guides to using Omnitest in various software development workflows.
+
 
 ### Getting started
 
-1. Open Omnitest
+1. Open [Omnitest](https://web.crabnebula.cloud/omnitest/omnitest/releases)
 2. Open project
 3. Review `Testing > Testing Round`
 4. Make code changes
@@ -113,3 +121,4 @@ Checkout the newer commit and adjust the older commit hash
     "changes": {
       "old": "<older git commit hash>",
       "new": "HEAD"
+```
