@@ -27,7 +27,7 @@ It is a desktop app that works on individual users' machines, using locally avai
 2. **Freedom to refactor**: The automatically generated change-based test plan improves product team's ability to modify the codebase safely. Easier and cheaper maintenace leads to more effective feature development.
 3. **Faster feedback loops**: Waiting is reduced in multiple ways, because a near instant automatic analysis can be run at will, by those who need it, at any stage of development. 
 
-#### Benefit calculations
+#### Benefit calculations 🍀💰
 
 **Test plan creation**
 
@@ -52,7 +52,7 @@ would [compound](https://en.wikipedia.org/wiki/Compound_interest#Periodic_compou
 - 1 year: between 13% and 214%
 - 3 years: between 43% and 2991%
 
-into theoretically produced extra value based on yearly cost of
+into potential extra value based on yearly cost of
 - 50 000€: between `13%/100% * 50 000€ = 6500€` and `2991% / 100% * 50 000€ = 1 495 500€`
 - 200 000€: between `13%/100% * 200 000€ = 26 000€` and `2991% / 100% * 50 000€ = 5 982 000€`
 
